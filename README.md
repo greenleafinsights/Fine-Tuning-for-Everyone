@@ -14,33 +14,37 @@ We also acknowledge the critical shortage of high-quality, domain-specific data 
 4. **Straightforward Pipeline**: From PDF ingestion through question–answer generation, each step is clearly laid out for quick adoption.
 
 ## Setup
-
-1. **Upgrade pip**  
+0. **Create Env**
+   ```bash
+   python3.12 -m venv [venv]
+   source [venv]/bin/activate
+   ```
+2. **Upgrade pip**  
    ```bash
    pip install --upgrade pip
    ```
-2. **Prepare Model Directory**  
+3. **Prepare Model Directory**  
    ```bash
    mkdir models
    curl -L https://huggingface.co/hantian/yolo-doclaynet/resolve/main/yolov11s-doclaynet.pt \
         -o ./models/yolov11s-doclaynet.pt
    ```
-3. **Install Requirements**  
+4. **Install Requirements**  
    ```bash
    pip install -r requirements.txt
    ```
-4. **Pull Ollama Models**  
+5. **Pull Ollama Models**  
    ```bash
    ollama pull llama3.2
    ollama pull granite-embedding
    ```
-5. **Set Up Input Folders**  
+6. **Set Up Input Folders**  
    ```bash
    mkdir input
    mkdir input/pdfs
    # Place PDF files into input/pdfs
    ```
-6. **Run**  
+7. **Run**  
    ```bash
    python3 synthetic_data_generator.py
    ```
