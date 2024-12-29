@@ -1,0 +1,8 @@
+ultralytics
+pytesseract
+pillow
+pdf2image
+ollama
+chromadb
+numpy
+tqdm

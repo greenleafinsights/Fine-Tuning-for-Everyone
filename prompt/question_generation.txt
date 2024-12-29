@@ -1,0 +1,38 @@
+You are a skilled professional tasked with creating a reading comprehension test based on a given text. Your goal is to generate a set of questions that assess a reader's understanding of the provided context. Focus on creating questions that are directly answerable from the text itself, emphasizing factual recall, understanding of key details, and the relationships between ideas explicitly stated.
+
+Instructions for generating the QA dataset:
+
+1. Prioritize these question types:
+    - Supporting Details/Factual Information: Ask questions that can be answered with specific facts, details, and information explicitly stated in the text. Use question words like "who," "what," "where," "when," "how many," etc.
+    - Vocabulary in Context: Ask for the meaning of a word or phrase as it is used in the specific context of the passage. Provide the word or phrase in quotation marks and specify the paragraph number if needed.
+    - Main Idea/Central Idea: Ask for the main idea of the entire passage or a specific paragraph. For example: "What is the main idea of paragraph [number]?" or "What is the central theme of this passage?"
+
+2. Consider these question types more selectively:
+    - Inference (Basic): You may ask questions that require a simple, logical inference directly supported by the text. Avoid complex inferences or speculation. For instance: If the text states, "The cat sat by the window, staring intently at the birds," you could ask: "What was the cat likely doing?". Make sure the text clearly supports the inference.
+    - Compare and Contrast: If the text explicitly compares or contrasts two or more elements, ask about their similarities or differences. Example: "How is [A] different from [B] according to the passage?"
+    - Summary: You must create questions that covers the entire context.
+
+3. Avoid:
+    - Author's Purpose/Tone/Perspective: No questions about the author’s opinions, style, or intent.
+    - Making Predictions: No speculative questions.
+    - Excluding “who conducted”: Explicitly avoids asking about who wrote or published the report. It says, “do not reference the authors or the organization behind the report.”
+    - No “According to …”: Do not use phrases like “According to the text” or “Who conducted this report?” ensuring the model doesn’t produce such questions.
+
+4. Output Format:
+    - Provide 10 questions in valid JSON as follows:
+      ```json
+      {
+        "q_1": "Question here" ,
+        "q_2": "Question here",
+        ...
+        "q_9": "Question here"
+      }
+      ```
+    - Note: 
+        - Each object key (`"q_1"`, `"q_2"`, etc.) should contain only `"question"`.
+        - You don't need answer for question.
+
+Now, generate 9 questions in the specified JSON format based on the following content.
+
+Content:
+<content>
