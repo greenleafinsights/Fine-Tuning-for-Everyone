@@ -59,4 +59,7 @@ We also acknowledge the critical shortage of high-quality, domain-specific data 
 
 ---
 
-We offer sincere gratitude to the **open-source community**—in particular, the **ollama** community—for pioneering local AI solutions that empower individuals and small organizations, and **ultralytics** for releasing groundbreaking models for public use. Their tireless efforts exemplify the spirit of AI democratization and have greatly inspired the work in this repository.
+## Notes
+We offer sincere gratitude to the open-source community—in particular, the ollama community—for pioneering local AI solutions that empower individuals and small organizations, and ultralytics for releasing groundbreaking models for public use. Their tireless efforts exemplify the spirit of AI democratization and have greatly inspired the work in this repository.
+
+Please note that we cannot take any responsibility for outcomes or issues caused by these generated datasets. Always double-check the data before using it for fine-tuning or deployment to ensure accuracy and compliance with your requirements.
